@@ -97,13 +97,32 @@ npm install jazzcash-sdk-node
 2. Create a .env file in your project root with the following variables:
 
 ```sh
-JAZZCASH_MERCHANT_ID=YourMerchantID
-JAZZCASH_PASSWORD=YourMerchantPassword
-JAZZCASH_HASH_KEY=YourHashKey
-JAZZCASH_ENVIRONMENT=sandbox
-JAZZCASH_SANDBOX_URL=https://sandbox.jazzcash.com.pk
-JAZZCASH_LIVE_URL=https://payments.jazzcash.com.pk
-JAZZCASH_API_VERSION=1.1
+# JazzCash Credentials and Environment Settings
+JAZZCASH_MERCHANT_ID="YourMerchantID"
+JAZZCASH_PASSWORD="YourMerchantPassword"
+JAZZCASH_HASH_KEY="YourHashKey"
+
+# Set environment to 'sandbox' or 'live'
+JAZZCASH_ENVIRONMENT="sandbox"
+
+# Set API version: 1.0, 1.1, or 2.0 (default is 1.1 if not specified)
+JAZZCASH_API_VERSION="1.1"
+
+# Base URLs for JazzCash endpoints
+JAZZCASH_SANDBOX_URL="https://sandbox.jazzcash.com.pk"
+JAZZCASH_LIVE_URL="https://payments.jazzcash.com.pk"
+
+# JazzCash API Endpoints
+JAZZCASH_AUTHORIZE_ENDPOINT="/ApplicationAPI/API/authorize/AuthorizePayment"
+JAZZCASH_CAPTURE_ENDPOINT="/ApplicationAPI/API/authorize/Capture"
+JAZZCASH_VOID_ENDPOINT="/ApplicationAPI/API/authorize/Void"
+JAZZCASH_REFUND_ENDPOINT="/ApplicationAPI/API/authorize/Refund"
+JAZZCASH_STATUS_ENDPOINT="/ApplicationAPI/API/PaymentInquiry/Inquire"
+JAZZCASH_DIRECT_PAY_ENDPOINT="/ApplicationAPI/API/DirectPay"
+JAZZCASH_MOBILE_ENDPOINT="/ApplicationAPI/API/Purchase/DoMWalletTransaction"
+JAZZCASH_VOUCHER_ENDPOINT="/ApplicationAPI/API/DoPaymentViaAPI"
+JAZZCASH_3DS_ENDPOINT="/ApplicationAPI/API/Purchase/Check3DsEnrollment"
+JAZZCASH_PROCESS_ACS_ENDPOINT="/ApplicationAPI/API/ProcessACS"
 ```
 
 ## Usage
