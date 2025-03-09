@@ -54,7 +54,7 @@ async function voucherPayment(data) {
       paymentData
     );
 
-    const endpoint = buildEndpoint('DoPaymentViaAPI');
+    const endpoint = buildEndpoint('VOUCHER');
     return await postRequest(endpoint, paymentData);
   } catch (error) {
     throw new Error(`Voucher payment failed: ${error.message}`);

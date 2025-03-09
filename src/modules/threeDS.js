@@ -64,10 +64,7 @@ async function check3DSecureEnrollment(data) {
     enrichedData
   );
 
-  return postRequest(
-    buildEndpoint('Purchase/Check3DsEnrollment'),
-    enrichedData
-  );
+  return postRequest(buildEndpoint('3DS_ENROLL'), enrichedData);
 }
 
 /**
@@ -88,7 +85,7 @@ async function processACS(data) {
     enrichedData
   );
 
-  return postRequest(buildEndpoint('ProcessACS'), enrichedData);
+  return postRequest(buildEndpoint('PROCESS_ACS'), enrichedData);
 }
 
 module.exports = { check3DSecureEnrollment, processACS };

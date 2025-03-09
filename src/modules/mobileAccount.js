@@ -64,7 +64,7 @@ async function mobileAccountPayment(data) {
   );
 
   try {
-    const endpoint = buildEndpoint('Purchase/DoMWalletTransaction');
+    const endpoint = buildEndpoint('MOBILE');
     return await postRequest(endpoint, paymentData);
   } catch (error) {
     throw new Error(`Payment processing failed: ${error.message}`);

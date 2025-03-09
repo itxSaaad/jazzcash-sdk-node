@@ -9,15 +9,6 @@ const DEFAULT_VALUES = {
   CURRENCY: 'PKR',
 };
 
-const ENDPOINTS = {
-  AUTHORIZE: '/authorize/AuthorizePayment',
-  CAPTURE: '/authorize/Capture',
-  VOID: '/authorize/Void',
-  REFUND: '/authorize/Refund',
-  STATUS: '/PaymentInquiry/Inquire',
-  DIRECT_PAY: '/DirectPay',
-};
-
 const fieldOrders = {
   AUTHORIZE: [
     'pp_InstrumentType',
@@ -110,7 +101,7 @@ async function callCardAPI(type, data) {
       enrichedData
     );
 
-    const endpoint = buildEndpoint(ENDPOINTS[type]);
+    const endpoint = buildEndpoint(type);
     const payloadKey = type === 'STATUS' ? '' : `${type}Request`;
     const payload = payloadKey ? { [payloadKey]: enrichedData } : enrichedData;
 
