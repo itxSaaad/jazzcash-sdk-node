@@ -1,0 +1,30 @@
+{
+  "name": "jazzcash-sdk-node",
+  "version": "1.0.0",
+  "description": "A comprehensive Node.js package for integrating the JazzCash Payment Gateway. Supports Card, Mobile Account, Voucher, and 3D Secure APIs with support for API versions 1.x and 2.x.",
+  "main": "src/index.js",
+  "scripts": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/itxSaaad/jazzcash-sdk-node.git"
+  },
+  "keywords": [
+    "jazzcash",
+    "payment",
+    "gateway",
+    "nodejs",
+    "integration",
+    "api",
+    "finance"
+  ],
+  "author": "Muhammad Saad",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/itxSaaad/jazzcash-sdk-node/issues"
+  },
+  "homepage": "https://github.com/itxSaaad/jazzcash-sdk-node#readme",
+  "dependencies": {
+    "axios": "^1.8.2",
+    "dotenv": "^16.4.7"
+  }
+}
